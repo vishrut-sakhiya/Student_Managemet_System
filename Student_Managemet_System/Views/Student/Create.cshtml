@@ -70,11 +70,33 @@
                         <input asp-for="Rank" class="form-control" type="number"/>
                         <span asp-validation-for="Rank" class="text-danger"></span>
                     </div>
-                    @* <div class="col-md-6">
-                        <label asp-for="Document" class="form-label">Document</label>
-                        <input asp-for="Document" class="form-control" />
-                        <span asp-validation-for="Document" class="text-danger"></span>
-                    </div> *@
+                    <div class="col-md-6">
+                        <label asp-for="Description" class="form-label">dws</label>
+                        <input type="text" asp-for="Description" class="form-control" />
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="Document" class="form-label">Document</label>
+                            <input type="file" asp-for="documents" class="form-control" id="fileInput" onchange="previewFile()" />
+
+                            <div class="mt-2" id="uploadedimg">
+                                @if (!string.IsNullOrEmpty(Model.Document))
+                                {
+                                    <img id="filePreview" src="@Model.Document" alt="Uploaded File" class="img-thumbnail"
+                                         style="width: 150px; height: 150px; object-fit: cover;" />
+                                }
+                                else
+                                {
+                                    <img id="filePreview" src="#" alt="Preview" class="img-thumbnail d-none"
+                                         style="width: 150px; height: 150px; object-fit: cover;" />
+                                }
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="row mb-4">
@@ -91,11 +113,7 @@
                 </div>
 
                 <div class="row mb-4">
-                    <div class="col-md-6">
-                        <label asp-for="Description" class="form-label">dws</label>
-                        <input type="text" asp-for="Description" class="form-control" />
-                        <span asp-validation-for="Description" class="text-danger"></span>
-                    </div>
+                    
                 </div>
 
                 <div class="row mt-2">
@@ -107,3 +125,30 @@
         </form>
     </div>
 </div>
+
+<script>
+    var originalImageSrc = document.getElementById("filePreview").src; // Store the original image
+
+    function previewFile() {
+        var file = document.getElementById("fileInput").files[0];
+        var preview = document.getElementById("filePreview");
+
+        if (file) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+                preview.classList.remove("d-none"); // Show image preview
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
+    function removeImagePreview() {
+        var preview = document.getElementById("filePreview");
+        var fileInput = document.getElementById("fileInput");
+
+        // Restore the original image if the user clicks cancel
+        preview.src = originalImageSrc;
+        fileInput.value = ""; // Reset file input to prevent accidental upload of a new file
+    }
+</script>

@@ -1,0 +1,41 @@
+->linkedin url 
+
+->details line ma rakhvani
+
+->new email name.me@gmail.com
+
+-> section wise
+   objective
+   work exp.
+   project
+   eduction
+   skills
+
+-> work exp change software engi to web dev
+
+-> remove class-x from education
+	
+-> all date in line wise
+
+-> remove HOBBIES & INTEREST
+
+-> change link on projects only name
+   and remove currently word
+
+-> change Technical Competencies to Technical 
+
+-> change this skills 
+   Languages - java, JavaScript, html, css, Bootstrap.
+   Database - MySQL
+add framework and add skills Bootstrap
+
+
+-> change experience june-2024 to dec-224
+
+-> change profile picture on LinkedIn and change web developer
+
+-> add GitHublink after linkedin
+
+Hello mam Good Morning!
+
+Here i share my resume for your refereance, please let me know your feedback regarding my application.

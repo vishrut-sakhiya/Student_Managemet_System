@@ -20,13 +20,27 @@ namespace Student_Managemet_System.Controllers
 
         public IActionResult Create()
         {
-            return View();
+            var viewModel = new StudentViewModel(); 
+            return View(viewModel);
         }
         [HttpPost]
         public IActionResult Create(StudentViewModel student)
         {
             try
             {
+                if (student.documents != null && student.documents.Length > 0)
+                {
+                    var filename = Path.GetFileName(student.documents.FileName);
+                    var filepath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Uploads", filename);
+
+                    using (var filestream = new FileStream(filepath, FileMode.Create))
+                    {
+                        student.documents.CopyTo(filestream);
+                    }
+
+                    student.Document = "/Uploads/" + filename;
+                    student.Document = filename;
+                }
                 DateTime? CurrentDate = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("India Standard Time"));
                 if (student.Id > 0 )
                 {
@@ -65,7 +79,6 @@ namespace Student_Managemet_System.Controllers
                         Phone = student.Phone,
                         Education = student.Education,
                         Description = student.Description,
-                        CreatedDate = CurrentDate,
                     };
                     _context.student.Add(students);
                 }
@@ -92,11 +105,10 @@ namespace Student_Managemet_System.Controllers
                 std_id = student.std_id,
                 Email = student.Email,
                 Rank = student.Rank,
-                Document = student.Document,
+                Document = string.IsNullOrEmpty(student.Document) ? "" : "/uploads/" + student.Document,
                 Phone = student.Phone,
                 Education = student.Education,
                 Description = student.Description,
-                CreateBy = student.CreateBy,
             };
             return View("Create" ,studentviewmodel);
         }
@@ -131,6 +143,7 @@ namespace Student_Managemet_System.Controllers
                 return NotFound();
 
             _context.student.Remove(student);
+            student.DeleteDate = DateTime.Now;
             _context.SaveChanges();
             return RedirectToAction("Index");
         }

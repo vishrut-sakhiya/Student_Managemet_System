@@ -1,0 +1,328 @@
+{
+	"items": [
+		{
+			"name": "userActions",
+			"data": []
+		},
+		{
+			"name": "UserProfileInfo",
+			"data": {
+				"@odata.context": "https://substrate.office.com/profileb2/v2.0/users/00030000-5a61-ccb9-0000-000000000000@84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa/$metadata#profile(accounts(),addresses(),anniversaries(),directoryExtensionAttributes(),educationalActivities(),names(),emails(),notes(),interests(),languages(),phones(),positions(),projects(),responsibilities(),skills(),topics(),webAccounts(),websites(),awards(),publications(),patents(),certifications(),extensions(),photos(),profileVideoMetadata(),summary())",
+				"profileId": "profileId",
+				"lastModifiedDateTime": "2024-12-18T12:27:18.1589321Z",
+				"activities": [],
+				"accounts": [
+					{
+						"ageGroup": "Adult",
+						"countryCode": "IN",
+						"userPrincipalName": "vishrutsakhiya106@gmail.com",
+						"externalDirectoryObjectId": "",
+						"alias": "",
+						"exchangeAccountType": null,
+						"exchangeAccountTypeDetails": null,
+						"cid": 9024252512681520000,
+						"puid": 844426446490809,
+						"userType": null,
+						"accountEnabled": null,
+						"isSipEnabled": null,
+						"profileMemberType": null,
+						"userPersona": null,
+						"allowedAudiences": "me",
+						"createdDateTime": "2023-02-23T11:31:04.5570338Z",
+						"lastModifiedDateTime": "2023-02-23T11:31:04.5570338Z",
+						"id": "c0149522-e8df-4da2-84df-e79261c8d113",
+						"isSearchable": false,
+						"preferredLanguageTag": {
+							"locale": "en-US",
+							"displayName": "English (United States)"
+						},
+						"originTenantInfo": null,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "MSA",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "MSA",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"MSA"
+							]
+						},
+						"sources": [
+							{
+								"id": "9a3e0ce2-cf4b-477e-b3b3-df246318e251"
+							}
+						]
+					}
+				],
+				"addresses": [],
+				"anniversaries": [
+					{
+						"type": "birthday",
+						"date": "2005-01-20T00:00:00Z",
+						"displayName": null,
+						"allowedAudiences": "me",
+						"createdDateTime": "2024-12-18T12:27:07.9453108Z",
+						"lastModifiedDateTime": "2024-12-18T12:27:07.9453109Z",
+						"id": "d114220b-15b6-4503-bc3f-389576b3cc70",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "Directory",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "Directory",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"MSA"
+							]
+						},
+						"sources": [
+							{
+								"id": "9a3e0ce2-cf4b-477e-b3b3-df246318e251"
+							}
+						]
+					}
+				],
+				"directoryExtensionAttributes": [],
+				"educationalActivities": [],
+				"names": [
+					{
+						"displayName": "",
+						"first": "Vishrut",
+						"initials": null,
+						"last": "Sakhiya",
+						"languageTag": null,
+						"maiden": null,
+						"middle": null,
+						"nickname": null,
+						"suffix": null,
+						"title": null,
+						"allowedAudiences": "organization, federatedOrganizations",
+						"createdDateTime": "2023-02-23T11:31:04.5570338Z",
+						"lastModifiedDateTime": "2023-02-23T11:31:04.5570338Z",
+						"id": "c5f07f56-a4f5-4d2f-b7f5-24f7d4bad237",
+						"isSearchable": false,
+						"pronunciation": null,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "MSA",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "MSA",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"MSA"
+							]
+						},
+						"sources": [
+							{
+								"id": "9a3e0ce2-cf4b-477e-b3b3-df246318e251"
+							}
+						]
+					}
+				],
+				"emails": [
+					{
+						"address": "vishrutsakhiya106@gmail.com",
+						"displayName": null,
+						"type": "personal",
+						"allowedAudiences": "me",
+						"createdDateTime": "2025-04-17T14:11:16.3463861Z",
+						"lastModifiedDateTime": "2025-04-17T14:11:16.3463862Z",
+						"id": "55939a40-ea79-42c7-86e3-4134acd5333b",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "Directory",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "Directory",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"MSA"
+							]
+						},
+						"sources": [
+							{
+								"id": "9a3e0ce2-cf4b-477e-b3b3-df246318e251"
+							}
+						]
+					},
+					{
+						"address": "outlook_7D3C95D905CEED42@outlook.com",
+						"displayName": null,
+						"type": "personal",
+						"allowedAudiences": "me",
+						"createdDateTime": "2025-04-17T14:11:16.3463891Z",
+						"lastModifiedDateTime": "2025-04-17T14:11:16.3463892Z",
+						"id": "e73b5eb8-a19f-49ff-b658-26b8652fce46",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "Directory",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "Directory",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"MSA"
+							]
+						},
+						"sources": [
+							{
+								"id": "9a3e0ce2-cf4b-477e-b3b3-df246318e251"
+							}
+						]
+					}
+				],
+				"notes": [],
+				"interests": [],
+				"languages": [],
+				"phones": [],
+				"positions": [],
+				"projects": [],
+				"responsibilities": [],
+				"skills": [],
+				"topics": [],
+				"webAccounts": [],
+				"websites": [],
+				"awards": [],
+				"publications": [],
+				"patents": [],
+				"certifications": [],
+				"extensions": [],
+				"photos": [
+					{
+						"changeKey": "W/\"0635cd9e8f9c14a00fc83df6254367833255fe613433498f5f9d43c49915fc9b\"",
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-12-18T12:27:08.0527674Z",
+						"lastModifiedDateTime": "2024-12-18T12:27:08.0527675Z",
+						"id": "cc9b2179-41ed-486a-a71e-6da9e44e258c",
+						"isSearchable": false,
+						"photoDetail": {
+							"url": "https://graph.microsoft.com/v1.0/users/outlook_7D3C95D905CEED42@outlook.com/photo/$value"
+						},
+						"createdBy": {
+							"user": null,
+							"application": null,
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "PhotoETag",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"PhotoETag"
+							]
+						},
+						"sources": [
+							{
+								"id": "107a83c9-714e-4d52-9d08-c303f081323b"
+							}
+						]
+					}
+				],
+				"profileVideoMetadata": {
+					"profileVideoUrl": null,
+					"allowedAudiences": "organization",
+					"createdDateTime": "2023-03-04T15:22:58.6150444Z",
+					"lastModifiedDateTime": "2023-03-04T15:22:58.6150444Z",
+					"id": "5d6d2cf2-e3d5-4824-8460-741ba2d55c7e",
+					"isSearchable": false,
+					"createdBy": {
+						"user": null,
+						"application": null,
+						"device": null
+					},
+					"inference": null,
+					"lastModifiedBy": {
+						"user": null,
+						"application": null,
+						"device": null
+					},
+					"source": {
+						"type": [
+							"User"
+						]
+					},
+					"sources": [
+						{
+							"id": "46a57efc-33f8-4eec-a512-b90039ad6187"
+						}
+					]
+				},
+				"summary": null
+			}
+		},
+		{
+			"name": "PeopleHighlights",
+			"data": []
+		},
+		{
+			"name": "Pronouns",
+			"data": []
+		}
+	]
+}
