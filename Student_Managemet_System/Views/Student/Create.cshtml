@@ -1,0 +1,109 @@
+﻿@using Student_Managemet_System.Models
+@using Student_Managemet_System.ViewModel
+@model StudentViewModel
+
+<div class="container my-5">
+    <div class="card shadow-lg">
+        <div class="card-header text-center bg-primary text-white">
+            <h2 class="mb-0">Create Employee</h2>
+        </div>
+
+        <form method="post" asp-action="Create" asp-controller="Student" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Id" />
+            <div class="card-body">
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <label asp-for="FirstName" class="form-label">FirstName</label>
+                        <input type="text" asp-for="FirstName" class="form-control" />
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="LastName" class="form-label">LastName</label>
+                        <input asp-for="LastName" class="form-control" type="text" />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <label asp-for="Address" class="form-label">Address</label>
+                        <input type="text" asp-for="Address" class="form-control" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="City" class="form-label">City</label>
+                        <input type="text" asp-for="City" class="form-control" type="text" />
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <label asp-for="Username" class="form-label">Username</label>
+                        <input type="text" asp-for="Username" class="form-control" />
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="Password" class="form-label">Password</label>
+                        <input asp-for="Password" class="form-control" type="number" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <label asp-for="Email" class="form-label">Email</label>
+                        <input type="text" asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="std_id" class="form-label">std_id</label>
+                        <input  asp-for="std_id" class="form-control" type="number" />
+                        <span asp-validation-for="std_id" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <label asp-for="Rank" class="form-label">Rank</label>
+                        <input asp-for="Rank" class="form-control" type="number"/>
+                        <span asp-validation-for="Rank" class="text-danger"></span>
+                    </div>
+                    @* <div class="col-md-6">
+                        <label asp-for="Document" class="form-label">Document</label>
+                        <input asp-for="Document" class="form-control" />
+                        <span asp-validation-for="Document" class="text-danger"></span>
+                    </div> *@
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <label asp-for="Phone" class="form-label">Phone</label>
+                        <input type="text" asp-for="Phone" class="form-control" />
+                        <span asp-validation-for="Rank" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="Education" class="form-label">Education</label>
+                        <input type="text" asp-for="Education" class="form-control" />
+                        <span asp-validation-for="Education" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <label asp-for="Description" class="form-label">dws</label>
+                        <input type="text" asp-for="Description" class="form-control" />
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
