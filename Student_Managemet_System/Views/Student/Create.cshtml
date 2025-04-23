@@ -81,7 +81,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="Document" class="form-label">Document</label>
-                            <input type="file" asp-for="documents" class="form-control" id="fileInput" onchange="previewFile()" />
+                            <input type="file" asp-for="documents" multiple class="form-control" id="fileInput" onchange="previewFile()" />
 
                             <div class="mt-2" id="uploadedimg">
                                 @if (!string.IsNullOrEmpty(Model.Document))

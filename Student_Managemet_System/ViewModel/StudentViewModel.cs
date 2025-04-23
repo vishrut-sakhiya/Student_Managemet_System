@@ -25,7 +25,7 @@ namespace Student_Managemet_System.ViewModel
         public int? Rank { get; set; }
         [Required(ErrorMessage = "Document is required")]
         public string? Document { get; set; }
-        public IFormFile? documents { get; set; }
+        public List<IFormFile>? documents { get; set; }
         [Required(ErrorMessage = "Phone is required")]
         public string? Phone { get; set; }
         [Required(ErrorMessage = "Education is required")]

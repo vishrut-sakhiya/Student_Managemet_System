@@ -27,20 +27,30 @@ namespace Student_Managemet_System.Controllers
         public IActionResult Create(StudentViewModel student)
         {
             try
-            {
-                if (student.documents != null && student.documents.Length > 0)
+            {   
+                if (student.documents != null && student.documents.Count > 0)
                 {
-                    var filename = Path.GetFileName(student.documents.FileName);
-                    var filepath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Uploads", filename);
+                    var filenames = new List<string>(); 
 
-                    using (var filestream = new FileStream(filepath, FileMode.Create))
+                    foreach (var file in student.documents)
                     {
-                        student.documents.CopyTo(filestream);
-                    }
+                        if (file.Length > 0)
+                        {
+                            var fileName = Path.GetFileName(file.FileName);
+                            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Uploads", fileName);
 
-                    student.Document = "/Uploads/" + filename;
-                    student.Document = filename;
+                            using (var stream = new FileStream(filePath, FileMode.Create))
+                            {
+                                file.CopyTo(stream); 
+                            }
+
+                            filenames.Add(fileName);
+                        }
+                    }
+                    student.Document = string.Join(",", filenames); 
                 }
+
+
                 DateTime? CurrentDate = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("India Standard Time"));
                 if (student.Id > 0 )
                 {
